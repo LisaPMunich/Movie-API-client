@@ -1,0 +1,1 @@
+{"mappings":"AAEA,UACI,aCDJ","sources":["src/index.scss","%3Cinput%20css%20hluQIT%3E"],"sourcesContent":["$color: steelblue;\n\n.movieAPI{\n    color: $color;\n}",".movieAPI {\n  color: steelblue;\n}\n/*# sourceMappingURL=index.c7f779b3.css.map */\n"],"names":[],"version":3,"file":"index.c7f779b3.css.map"}

@@ -1,9 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import * as ReactDOMClient from 'react-dom/client';
 
 import './index.scss';
 
-class movieAPIApplication extends React.Component {
+const container = document.getElementsByClassName('app-container')[0];
+
+// create root
+const root = ReactDOMClient.createRoot(container);
+
+class MovieApplication extends React.Component {
     render(){
         return(
             <div className="movieAPI">
@@ -13,6 +18,4 @@ class movieAPIApplication extends React.Component {
     }
 }
 
-const container = document.getElementbyClassName('app-container')[0];
-
-ReactDOM.render(React.createElement(movieApplication), container);
+root.render(<MovieApplication/>);
