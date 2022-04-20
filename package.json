@@ -2,10 +2,21 @@
   "name": "movie-api-client",
   "version": "1.0.0",
   "description": "Client-side of existing RESTful Movie-API",
-  "main": "index.js",
+  "source": "src/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel",
+    "watch": "parcel watch",
+    "build": "parcel build"
   },
   "author": "LisaPMunich",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.4.1",
+    "parcel": "^2.4.1"
+  }
 }
