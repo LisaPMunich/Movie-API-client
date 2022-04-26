@@ -25030,9 +25030,8 @@ class MainView extends _reactDefault.default.Component {
         });
     }
     setSelectedMovie(newSelectedMovie) {
-        this.state.selectedMovie = movie;
         this.setState({
-            selectedMovie: movie
+            selectedMovie: newSelectedMovie
         });
     }
     onLoggedIn(user) {
@@ -25051,7 +25050,6 @@ class MainView extends _reactDefault.default.Component {
                     lineNumber: 58,
                     columnNumber: 13
                 }, this),
-                ";",
                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("button", {
                     children: "Sign up here"
                 }, void 0, false, {

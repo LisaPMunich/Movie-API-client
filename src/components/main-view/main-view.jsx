@@ -34,11 +34,11 @@ export class MainView extends React.Component {
     }
 
     setSelectedMovie(newSelectedMovie) {
-        this.state.selectedMovie = movie;
+
 
 
         this.setState({
-            selectedMovie: movie
+            selectedMovie: newSelectedMovie
         });
     }
 
@@ -55,7 +55,7 @@ export class MainView extends React.Component {
 
         if(!user) return (
             <>
-            <LoginView onLoggedIn={user =>this.onLoggedIn(user)}/>;
+            <LoginView onLoggedIn={user =>this.onLoggedIn(user)}/>
             <button>Sign up here</button>
             </>
         )
