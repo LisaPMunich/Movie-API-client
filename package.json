@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel",
+    "start:html": "parcel src/index.html",
     "watch": "parcel watch",
     "build": "parcel build"
   },
@@ -19,6 +20,10 @@
   "devDependencies": {
     "@parcel/transformer-image": "^2.5.0",
     "@parcel/transformer-sass": "^2.5.0",
-    "parcel": "^2.5.0"
+    "buffer": "^6.0.3",
+    "parcel": "^2.5.0",
+    "process": "^0.11.10",
+    "querystring-es3": "^0.2.1",
+    "url": "^0.11.0"
   }
 }
