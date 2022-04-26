@@ -25244,6 +25244,8 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _movieCard = require("../movie-card/movie-card");
 var _movieView = require("../movie-view/movie-view");
+var _chasingIceJpg = require("../../images/ChasingIce.jpg");
+var _chasingIceJpgDefault = parcelHelpers.interopDefault(_chasingIceJpg);
 class MainView extends _reactDefault.default.Component {
     constructor(props){
         super(props);
@@ -25253,7 +25255,7 @@ class MainView extends _reactDefault.default.Component {
                     _id: 1,
                     Title: "Chasing Ice",
                     Description: "Chasing Coral tracks the worldwide disappearance of coral, a crucial ecosystem for sustaining marine life. It’s another inconvenient truth that coral could be completely wiped out in 30 years by climate change. Chasing Coral is a journey taken by a team of researchers trying to document the bleaching of coral in warming seas.",
-                    ImageURL: "https://picsum.photos/200/300"
+                    ImageURL: _chasingIceJpgDefault.default
                 },
                 {
                     _id: 2,
@@ -25287,7 +25289,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 51
+                lineNumber: 52
             },
             __self: this,
             children: "The list is empty!"
@@ -25296,7 +25298,7 @@ class MainView extends _reactDefault.default.Component {
             className: "main-view",
             __source: {
                 fileName: "src/components/main-view/main-view.jsx",
-                lineNumber: 54
+                lineNumber: 55
             },
             __self: this,
             children: selectedMovie ? /*#__PURE__*/ _jsxRuntime.jsx(_movieView.MovieView, {
@@ -25306,7 +25308,7 @@ class MainView extends _reactDefault.default.Component {
                 },
                 __source: {
                     fileName: "src/components/main-view/main-view.jsx",
-                    lineNumber: 56
+                    lineNumber: 57
                 },
                 __self: this
             }) : movies.map((movie)=>/*#__PURE__*/ _jsxRuntime.jsx(_movieCard.MovieCard, {
@@ -25316,7 +25318,7 @@ class MainView extends _reactDefault.default.Component {
                     },
                     __source: {
                         fileName: "src/components/main-view/main-view.jsx",
-                        lineNumber: 57
+                        lineNumber: 58
                     },
                     __self: this
                 }, movie._id)
@@ -25330,7 +25332,7 @@ class MainView extends _reactDefault.default.Component {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"hM8Bg","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"b4zQi","../movie-card/movie-card":"6EiBJ","../movie-view/movie-view":"ikZdr"}],"6EiBJ":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","../movie-card/movie-card":"6EiBJ","../movie-view/movie-view":"ikZdr","@parcel/transformer-js/src/esmodule-helpers.js":"hM8Bg","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"b4zQi","../../images/ChasingIce.jpg":"imWsN"}],"6EiBJ":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$4249 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -25485,6 +25487,44 @@ class MovieView extends _reactDefault.default.Component {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"hM8Bg","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"b4zQi"}]},["lUguf","eyNsB","dLPEP"], "dLPEP", "parcelRequireed74")
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"hM8Bg","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"b4zQi"}],"imWsN":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('3VpAv') + "ChasingIce.fc153088.jpg";
+
+},{"./helpers/bundle-url":"4JoHX"}],"4JoHX":[function(require,module,exports) {
+"use strict";
+var bundleURL = {
+};
+function getBundleURLCached(id) {
+    var value = bundleURL[id];
+    if (!value) {
+        value = getBundleURL();
+        bundleURL[id] = value;
+    }
+    return value;
+}
+function getBundleURL() {
+    try {
+        throw new Error();
+    } catch (err) {
+        var matches = ('' + err.stack).match(/(https?|file|ftp):\/\/[^)\n]+/g);
+        if (matches) // The first two stack frames will be this function and getBundleURLCached.
+        // Use the 3rd one, which will be a runtime in the original bundle.
+        return getBaseURL(matches[2]);
+    }
+    return '/';
+}
+function getBaseURL(url) {
+    return ('' + url).replace(/^((?:https?|file|ftp):\/\/.+)\/[^/]+$/, '$1') + '/';
+} // TODO: Replace uses with `new URL(url).origin` when ie11 is no longer supported.
+function getOrigin(url) {
+    var matches = ('' + url).match(/(https?|file|ftp):\/\/[^/]+/);
+    if (!matches) throw new Error('Origin not found');
+    return matches[0];
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+exports.getOrigin = getOrigin;
+
+},{}]},["lUguf","eyNsB","dLPEP"], "dLPEP", "parcelRequireed74")
 
 //# sourceMappingURL=index.6701a6e1.js.map
