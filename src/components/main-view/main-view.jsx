@@ -1,21 +1,27 @@
 import React from 'react';
 import axios from 'axios';
 
+import {LoginView} from '../login-view/login-view';
+import {RegistrationView} from '../registration-view/registration-view';
 import {MovieCard} from '../movie-card/movie-card';
 import {MovieView} from '../movie-view/movie-view';
-import ChasingIceImage from '../../images/ChasingIce.jpg';
 
 
 export class MainView extends React.Component {
-    constructor() {
-        super();
+
+    constructor(props) {
+        super(props);
         this.state = {
             movies: [],
             selectedMovie: null,
+            user: null
         }
     }
 
     componentDidMount() {
+        console.log(this.name);
+        this.name = "Actually Lisa";
+
         axios.get('https://young-fjord-17804.herokuapp.com/movies')
             .then(response =>{
                 this.setState({
@@ -28,22 +34,31 @@ export class MainView extends React.Component {
     }
 
     setSelectedMovie(newSelectedMovie) {
+        this.state.selectedMovie = movie;
+
+
         this.setState({
-            selectedMovie: newSelectedMovie
+            selectedMovie: movie
         });
     }
 
-    unselectMovie(){
+    onLoggedIn(user){
         this.setState({
-            selectedMovie: null,
-        })
+            user,
+        });
     }
 
 
 
     render() {
-        const {movies, selectedMovie} = this.state;
+        const {movies, selectedMovie, user} = this.state;
 
+        if(!user) return (
+            <>
+            <LoginView onLoggedIn={user =>this.onLoggedIn(user)}/>;
+            <button>Sign up here</button>
+            </>
+        )
         if (movies.length === 0) {
             return <div className="main-view"/>
         }
