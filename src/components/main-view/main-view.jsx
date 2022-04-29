@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Row from 'react-bootstrap/Row';
+import {Col} from 'react-bootstrap';
 
 import {LoginView} from '../login-view/login-view';
 import {RegistrationView} from '../registration-view/registration-view';
@@ -41,6 +42,7 @@ export class MainView extends React.Component {
     }
 
     onLoggedIn(user) {
+        console.log()
         this.setState({
             user,
         });
@@ -53,9 +55,9 @@ export class MainView extends React.Component {
         if (!user) return (
             <>
                 <LoginView onLoggedIn={user => this.onLoggedIn(user)}/>
-                <button>Sign up here</button>
             </>
         )
+
         if (movies.length === 0) {
             return <div className="main-view"/>
         }
@@ -64,9 +66,9 @@ export class MainView extends React.Component {
                 {selectedMovie
                     ? (
                         <Col md={8}>
-                                <MovieView movie={selectedMovie} onClickBack={newSelectedMovie => {
-                                    this.setSelectedMovie(newSelectedMovie);
-                                }}/>
+                            <MovieView movie={selectedMovie} onClickBack={newSelectedMovie => {
+                                this.setSelectedMovie(newSelectedMovie);
+                            }}/>
                         </Col>
                     )
                     : movies.map(movie => (

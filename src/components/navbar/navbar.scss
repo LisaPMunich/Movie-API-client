@@ -9,21 +9,7 @@ $color-button-outline: #45A29E;
     box-sizing: border-box;
 }
 
-.app {
+.navbar {
     margin: 0;
     font-family: 'Inter', sans-serif;
 }
-
-.navbar{
-    background-color: $color-background-nav;
-}
-
-.nav--brand{
-    color: $color-header;
-}
-
-.movieAPI{
-    background-color: $color-background;
-    color: $color-text;
-}
-

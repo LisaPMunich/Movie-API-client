@@ -1,24 +1,20 @@
 import React from 'react';
+import {Card, Button} from "react-bootstrap";
+
 
 export class MovieView extends React.Component {
 
     render(){
         const {movie, onClickBack}=this.props;
         return (
-            <div className="movie-view">
-                <div className="movie-poster">
-                    <img src={movie.ImageURL}/>
-                </div>
-                <div className="movie-title">
-                    <span className="label">Title: </span>
-                    <span className="value">{movie.Title}</span>
-                </div>
-                <div className="movie-description">
-                    <span className="label">Description: </span>
-                    <span className="value">{movie.Description}</span>
-                </div>
-                <button onClick={() => { onClickBack(); }}>Back</button>
-           </div>
+            <Card className="card">
+                <Card.Img variant="top" src={movie.ImageURL}/>
+                <Card.Body>
+                    <Card.Title>{movie.Title}</Card.Title>
+                    <Card.Text>{movie.Description}</Card.Text>
+                    <Button variant="primary" onClick={() => { onClickBack(); }}>Back</Button>
+                </Card.Body>
+            </Card>
         );
     }
 }
