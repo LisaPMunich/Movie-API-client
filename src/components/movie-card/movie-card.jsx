@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import {Button, Card, Row, Col} from 'react-bootstrap';
+import "./movie-card.scss"
+
 
 export class MovieCard extends React.Component {
     render(){
@@ -10,9 +11,9 @@ export class MovieCard extends React.Component {
             <Card>
                 <Card.Img variant="top" src={movie.ImageURL}/>
                 <Card.Body>
-                    <Card.Title>{movie.Title}</Card.Title>
-                    <Card.Text>{movie.Description}</Card.Text>
-                    <Button onClick={() => onMovieClick(movie)} variant="link">Open</Button>
+                    <Card.Title className="movie-card__title">{movie.Title}</Card.Title>
+                    <Card.Text className="movie-card__text">{movie.Description}</Card.Text>
+                    <Button onClick={() => onMovieClick(movie)} variant="outline-dark">Open</Button>
                 </Card.Body>
             </Card>
         );
