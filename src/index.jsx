@@ -7,10 +7,11 @@ import {MainView} from "./components/main-view/main-view";
 import Navbar from "./components/navbar/navbar.jsx"
 
 
+
 class MovieApplication extends React.Component {
     render() {
         return (
-            <Container className="app">
+            <Container className="app p-0" fluid>
                 <Navbar/>
                 <MainView/>
             </Container>

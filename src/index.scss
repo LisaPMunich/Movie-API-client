@@ -7,11 +7,20 @@ $color-button-outline: #45A29E;
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    margin: 0;
 }
 
 .app {
-    margin: 0;
     font-family: 'Inter', sans-serif;
+    background-color: $color-background;
+    min-height: 100vh;
+
 }
 
 .navbar{
