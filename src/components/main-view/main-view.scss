@@ -1,0 +1,24 @@
+/* color scheme by visme.co "Bert"*/
+$color-contrast: #66FCF1;
+$color-text: #C5C6C7;
+$color-background: #1F2833;
+$color-background-nav: #0B0C10;
+$color-primary: #45A29E;
+
+* {
+    box-sizing: border-box;
+}
+
+
+.main-view{
+    background-color: $color-background;
+    min-height: 100vh;
+
+    padding: 80px 50px;
+}
+
+.movie-card{
+
+}
+
+
