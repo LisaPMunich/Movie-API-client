@@ -1,15 +1,15 @@
 /* color scheme by visme.co "Bert"*/
-$color-header: #66FCF1;
+$color-contrast: #66FCF1;
 $color-text: #C5C6C7;
 $color-background: #1F2833;
 $color-background-nav: #0B0C10;
-$color-button-outline: #45A29E;
+$color-primary: #45A29E;
 
 * {
     box-sizing: border-box;
 }
 
-.navbar {
-    margin: 0;
+.navbar-container{
     font-family: 'Inter', sans-serif;
 }
+
