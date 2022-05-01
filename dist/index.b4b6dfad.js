@@ -37007,6 +37007,7 @@ class MovieView extends _reactDefault.default.Component {
                                             lineNumber: 26,
                                             columnNumber: 37
                                         }, this),
+                                        " ",
                                         movie.Director.Name,
                                         " ",
                                         hasBirth && `(born: ${movie.Director.Birth})`

@@ -23,7 +23,7 @@ export class MovieView extends React.Component {
                                 <Card.Text>{movie.Description}</Card.Text>
                                 <Card.Text><span className="bold">Genre: </span>{movie.Genre.Name}</Card.Text>
                                 <Card.Text>
-                                    <span className="bold">Director: </span>{movie.Director.Name} {hasBirth && `(born: ${movie.Director.Birth})`}
+                                    <span className="bold">Director: </span> {movie.Director.Name} {hasBirth && `(born: ${movie.Director.Birth})`}
                                 </Card.Text>
                                 <Card.Text><span className="bold">Biography: </span>{movie.Director.Bio}</Card.Text>
                                 <Button variant="outline-info" onClick={() => { onClickBack(); }}>Back</Button>
