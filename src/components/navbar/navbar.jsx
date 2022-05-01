@@ -21,8 +21,8 @@ export default function NavBar (){
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                             <Nav className="navLink-list">
-                                <Nav.Link href="#movies">Movies</Nav.Link>
-                                <Nav.Link href="#myprofile">My Profile</Nav.Link>
+                                <Nav.Link style={{color: "#66FCF1"}} href="#movies">Movies</Nav.Link>
+                                <Nav.Link style={{color: "#66FCF1"}} href="#myprofile">My Profile</Nav.Link>
                                 <Nav.Link href="#logout">Logout</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>

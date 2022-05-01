@@ -4,7 +4,8 @@ import Container from 'react-bootstrap/Container';
 
 import './index.scss';
 import {MainView} from "./components/main-view/main-view";
-import Navbar from "./components/navbar/navbar.jsx"
+import Navbar from "./components/navbar/navbar"
+import Footer from "./components/footer/footer"
 
 
 
@@ -14,6 +15,7 @@ class MovieApplication extends React.Component {
             <Container className="app p-0" fluid>
                 <Navbar/>
                 <MainView/>
+                <Footer/>
             </Container>
         );
     }

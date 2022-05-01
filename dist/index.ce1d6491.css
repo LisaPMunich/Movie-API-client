@@ -146,17 +146,33 @@ body {
   padding: 0 6px 0 14px;
   font-family: Square Peg, cursive;
   font-size: xx-large;
+  font-weight: bold;
 }
 
 .brandName-lastWord {
   padding: 0 5px;
   font-family: Square Peg, cursive;
   font-size: xx-large;
+  font-weight: bold;
 }
 
 .navLink-list {
   padding: 0 8px;
   font-size: x-large;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.footer {
+  background-color: #1f2833;
+  padding: 15px 30px;
+}
+
+.copyright, .attribution {
+  color: #c5c6c7;
+  font-family: Inter, sans-serif;
 }
 
 /*# sourceMappingURL=index.ce1d6491.css.map */

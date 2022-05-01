@@ -1,0 +1,22 @@
+/* color scheme by visme.co "Bert"*/
+$color-contrast: #66FCF1;
+$color-text: #C5C6C7;
+$color-background: #1F2833;
+$color-background-nav: #0B0C10;
+$color-primary: #45A29E;
+
+* {
+    box-sizing: border-box;
+}
+
+
+.footer {
+    background-color: $color-background;
+    padding: 15px 30px;
+}
+
+.copyright,
+.attribution {
+    font-family: 'Inter', sans-serif ;
+    color: $color-text;
+}
