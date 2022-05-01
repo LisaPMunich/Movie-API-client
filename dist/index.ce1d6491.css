@@ -142,4 +142,21 @@ body {
   font-family: Inter, sans-serif;
 }
 
+.brandName-firstWord {
+  padding: 0 6px 0 14px;
+  font-family: Square Peg, cursive;
+  font-size: xx-large;
+}
+
+.brandName-lastWord {
+  padding: 0 5px;
+  font-family: Square Peg, cursive;
+  font-size: xx-large;
+}
+
+.navLink-list {
+  padding: 0 8px;
+  font-size: x-large;
+}
+
 /*# sourceMappingURL=index.ce1d6491.css.map */

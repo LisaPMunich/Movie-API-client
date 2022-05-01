@@ -25,7 +25,7 @@ export class MovieView extends React.Component {
                                     <span className="bold">Director: </span>{movie.Director.Name} {hasBirth && `(born: ${movie.Director.Birth})`}
                                 </Card.Text>
                                 <Card.Text><span className="bold">Biography: </span>{movie.Director.Bio}</Card.Text>
-                                <Button variant="outline-dark" onClick={() => { onClickBack(); }}>Back</Button>
+                                <Button variant="outline-info" onClick={() => { onClickBack(); }}>Back</Button>
                             </Card.Body>
                         </Col>
                     </Row>
