@@ -1,7 +1,6 @@
 import React from 'react';
-import {Card, Button, Container, Row, Col} from "react-bootstrap";
+import {Card, Button, Row, Col} from "react-bootstrap";
 import './movie-view.scss'
-import Bear from "../navbar/icons8-bär-50.png";
 
 
 export class MovieView extends React.Component {

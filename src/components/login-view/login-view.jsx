@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {Button, Form} from 'react-bootstrap';
+import axios from 'axios';
 import './login-view.scss';
 
 export function LoginView(props) {
@@ -8,8 +9,18 @@ export function LoginView(props) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(name, password);
-        props.onLoggedIn(name);
+
+        axios.post('https://young-fjord-17804.herokuapp.com/login',{
+            Username: name,
+            Password: password
+            })
+            .then(response=>{
+                const data = response.data;
+                props.onLoggedIn(data);
+            })
+            .catch(e=>{
+                console.log('no such user')
+            });
     };
 
     return (

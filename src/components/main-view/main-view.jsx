@@ -43,9 +43,8 @@ export class MainView extends React.Component {
     }
 
     onLoggedIn(user) {
-        console.log()
         this.setState({
-            user,
+            user
         });
     }
 

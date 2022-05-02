@@ -32,6 +32,16 @@ body {
   box-sizing: border-box;
 }
 
+.main-view {
+  min-height: 100vh;
+  background-color: #1f2833;
+  padding: 80px 50px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .login--form-container {
   min-height: 100vh;
   background-color: #1f2833;
@@ -122,16 +132,6 @@ body {
 .card-body {
   margin: 20px auto;
   position: relative;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.main-view {
-  min-height: 100vh;
-  background-color: #1f2833;
-  padding: 80px 50px;
 }
 
 * {
