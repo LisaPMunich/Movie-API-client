@@ -4,6 +4,14 @@ import './navbar.scss';
 import Bear from './icons8-bär-50.png'
 
 export default function NavBar (){
+        const onLoggedOut = () =>{
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        this.setState({
+            user: null
+        });
+         }
+
     return(
         <Container fluid className="navbar-container p-0 pb-5 mb-5">
             <Row >
@@ -23,7 +31,7 @@ export default function NavBar (){
                             <Nav className="navLink-list">
                                 <Nav.Link style={{color: "#66FCF1"}} href="#movies">Movies</Nav.Link>
                                 <Nav.Link style={{color: "#66FCF1"}} href="#myprofile">My Profile</Nav.Link>
-                                <Nav.Link href="#logout">Logout</Nav.Link>
+                                <Nav.Link href="#logout" onClick={() => {onLoggedOut() }}>Logout</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>

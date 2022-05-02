@@ -1,5 +1,7 @@
 import React from 'react';
 import {Card, Button, Row, Col} from "react-bootstrap";
+import {Link} from "react-router-dom";
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './movie-view.scss'
 
 
@@ -8,7 +10,6 @@ export class MovieView extends React.Component {
     render(){
         const {movie, onClickBack}=this.props;
 
-        const hasBirth=movie.Director.Birth.toString().trim();
 
         return (
             <Card className="movie-view">
@@ -20,11 +21,13 @@ export class MovieView extends React.Component {
                             <Card.Body className="card-body">
                                 <Card.Title>{movie.Title}</Card.Title>
                                 <Card.Text>{movie.Description}</Card.Text>
-                                <Card.Text><span className="bold">Genre: </span>{movie.Genre.Name}</Card.Text>
-                                <Card.Text>
-                                    <span className="bold">Director: </span> {movie.Director.Name} {hasBirth && `(born: ${movie.Director.Birth})`}
-                                </Card.Text>
-                                <Card.Text><span className="bold">Biography: </span>{movie.Director.Bio}</Card.Text>
+                                <Link to={`/directors/${movie.Director.Name}`}>
+                                    <Button variant="link">Director</Button>
+                                </Link>
+                                <Link to={`/genres/${movie.Genre.Name}`}>
+                                    <Button variant="link">Genre</Button>
+                                </Link>
+
                                 <Button variant="outline-info" onClick={() => { onClickBack(); }}>Back</Button>
                             </Card.Body>
                         </Col>
