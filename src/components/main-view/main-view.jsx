@@ -42,10 +42,28 @@ export class MainView extends React.Component {
         });
     }
 
-    onLoggedIn(user) {
+    getMovies(token){
+        axios.get('https://young-fjord-17804.herokuapp.com/movies', {
+            headers: { Authorization: `Bearer ${token}`}
+        })
+            .then(response=>{
+                this.setState({
+                    movies: response.data
+                });
+            })
+            .catch(function(error){
+                console.log(error);
+            });
+    }
+
+    onLoggedIn(authData) {
+        console.log(authData);
         this.setState({
-            user
+            user: authData.user.Name
         });
+        localStorage.setItem('token', authData.token);
+        localStorage.setItem('user', authData.user.Name);
+        this.getMovies(authData.token);
     }
 
 

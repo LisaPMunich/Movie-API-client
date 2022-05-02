@@ -11,7 +11,7 @@ export function LoginView(props) {
         e.preventDefault();
 
         axios.post('https://young-fjord-17804.herokuapp.com/login',{
-            Username: name,
+            Name: name,
             Password: password
             })
             .then(response=>{
