@@ -10,8 +10,8 @@ export class MovieCard extends React.Component {
         const {movie}=this.props;
         return (
             <Card>
-                <Card.Img variant="top" src={movie.ImageURL} style={{ height: "350px" }}/>
-                <Card.Body>
+                <Card.Img variant="top" src={movie.ImageURL} style={{ height: "300px" }}/>
+                <Card.Body className="py-0">
                     <Card.Title className="movie-card__title">{movie.Title}</Card.Title>
                     <Card.Text className="movie-card__text">{movie.Description}</Card.Text>
                     <Link to={`/movies/${movie._id}`}>
@@ -39,6 +39,5 @@ MovieCard.propTypes = {
         }),
         ImageURL: PropTypes.string.isRequired,
         Featured:PropTypes.bool
-    }).isRequired,
-    onMovieClick: PropTypes.func.isRequired
+    }).isRequired
 };

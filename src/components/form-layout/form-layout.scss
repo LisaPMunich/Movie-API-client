@@ -1,4 +1,3 @@
-/* color scheme by visme.co "Bert"*/
 $color-contrast: #66FCF1;
 $color-text: #C5C6C7;
 $color-background: #1F2833;
@@ -9,25 +8,45 @@ $color-primary: #45A29E;
     box-sizing: border-box;
 }
 
-.login--form-container{
+a.form-link {
+    color: $color-primary;
+}
+
+.form-container{
     background-color: $color-background;
     display: flex;
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    min-height: 100vh;
     font-family: 'Inter', sans-serif;
+
+    .list-group-item {
+        background-color: $color-background;
+        color: $color-primary;
+        border: none;
+    }
 }
 
-.register--form{
+.form-title{
+    margin: 40px 0;
+    color: $color-text;
+    font-size: 28px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.form-border{
     border: 1px solid #F5F5F5;
     border-radius: 9px;
     width: 470px;
-    height: 450px;
 
     margin-top: 40px;
-    padding: 30px 50px;
+    padding: 20px 50px 24px 50px;
     align-items: center;
 
     gap: 20px;
+}
+
+.form-layout-text {
+    color: $color-text;
 }

@@ -12,9 +12,16 @@ $color-primary: #45A29E;
 
 .main-view{
     background-color: $color-background;
+    flex-direction: row;
     min-height: 100vh;
     padding: 80px 50px;
+    align-items: center;
 }
+
+.movie-view--image{
+    width: 30%;
+}
+
 
 
 

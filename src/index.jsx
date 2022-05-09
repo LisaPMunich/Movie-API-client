@@ -4,18 +4,15 @@ import Container from 'react-bootstrap/Container';
 
 import './index.scss';
 import {MainView} from "./components/main-view/main-view";
-import Navbar from "./components/navbar/navbar"
 import Footer from "./components/footer/footer"
-
 
 
 class MovieApplication extends React.Component {
     render() {
         return (
-            <Container className="app p-0" fluid>
-                <Navbar/>
+            <Container className="flex-wrapper app p-0" fluid>
                 <MainView/>
-                <Footer/>
+                <Footer className="footer"/>
             </Container>
         );
     }

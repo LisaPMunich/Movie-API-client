@@ -12,6 +12,13 @@ $color-primary: #45A29E;
 
 .movie-view{
     background-color: $color-background;
+
+    &__star {
+        width: 25px;
+        height:25px;
+        bottom:3px;
+        position: relative;
+    }
 }
 
 .bold{

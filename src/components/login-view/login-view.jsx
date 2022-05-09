@@ -1,47 +1,42 @@
-import React, { useState } from 'react';
-import {Button, Form} from 'react-bootstrap';
-import axios from 'axios';
+import React, {useState} from 'react';
+import {Button, Form, NavLink} from 'react-bootstrap';
 import './login-view.scss';
+import PropTypes from "prop-types";
+import {FormLayout} from "../form-layout/form-layout";
+import {Link} from "react-router-dom";
 
-export function LoginView(props) {
-    const [ name, setName ] = useState('');
-    const [ password, setPassword ] = useState('');
+export function LoginView({onLogin}) {
+    const [name, setName] = useState('');
+    const [password, setPassword] = useState('');
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        axios.post('https://young-fjord-17804.herokuapp.com/login',{
-            Name: name,
-            Password: password
-            })
-            .then(response=>{
-                const data = response.data;
-                props.onLoggedIn(data);
-            })
-            .catch(e=>{
-                console.log('no such user')
-            });
+        onLogin(name, password);
     };
 
     return (
-    <div className="login--form-container">
-        <Form className="login--form">
-            <h2 className="login--form-title">Login</h2>
-            <Form.Group className="form--group"controlId="formUsername">
-                <Form.Control className="form--input-field" type="text" placeholder="Username" onChange={e=>setName(e.target.value)}/>
+        <FormLayout title="Login">
+            <Form.Group controlId="formUsername">
+                <Form.Control className="mt-4" type="text" placeholder="Username"
+                              onChange={e => setName(e.target.value)}/>
             </Form.Group>
-            <Form.Group className="form--group" controlId="formPassword">
-                <Form.Control className="form--input-field" type="password" placeholder="Password" onChange={e=>setPassword(e.target.value)}/>
+            <Form.Group controlId="formPassword">
+                <Form.Control className="mt-4" type="password" placeholder="Password"
+                              onChange={e => setPassword(e.target.value)}/>
             </Form.Group>
-            <div className="form--button-container">
-                <Button className="form--button-login" variant="info" type="submit" onClick={handleSubmit}>SIGN IN</Button>
+            <div className="text-center">
+                <Button className="mt-4" variant="info" type="submit" onClick={handleSubmit}>SIGN IN</Button>
             </div>
-            <p className="register-call">
-                <span className="register-text">Don't have an account?&nbsp;
-                    <a className="register-link" type="submit">Sign up</a>
+
+            <p className="pt-3 text-center">
+                <span>Don't have an account?&nbsp;
+                    <Link to="/register" className="form-link" type="submit">Sign up</Link>
                 </span>
             </p>
-        </Form>
-    </div>
+        </FormLayout>
     );
 }
+
+LoginView.propTypes = {
+    onLogin: PropTypes.func.isRequired,
+};

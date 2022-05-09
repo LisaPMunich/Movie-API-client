@@ -1,22 +1,32 @@
 import React from 'react';
-import {Navbar, Container, Row, Col, Nav, Button, Form, FormControl}  from "react-bootstrap";
+import {Button, Col, Container, Nav, Navbar, Row} from "react-bootstrap";
 import './navbar.scss';
 import Bear from './icons8-bär-50.png'
 
-export default function NavBar (){
-        const onLoggedOut = () =>{
-        localStorage.removeItem('token');
-        localStorage.removeItem('user');
-        this.setState({
-            user: null
-        });
-         }
+export default function NavBar ({ user }){
+
+    const onLoggedOut = () =>{
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    window.open("/", "_self");
+    }
+
+    const isAuth=()=>{
+        if(typeof window == "undefined"){
+            return false
+        }
+        if (localStorage.getItem("token")){
+            return localStorage.getItem("token");
+        } else{
+            return false;
+        }
+    };
 
     return(
         <Container fluid className="navbar-container p-0 pb-5 mb-5">
             <Row >
                 <Col>
-                    <Navbar className="navbar py-3 shadow-lg p-3 mb-5 bg-body rounded" expand="lg" bg="dark" variant="dark" fixed="top">
+                    <Navbar className="navbar shadow-lg p-3 mb-3 bg-body rounded" expand="lg" bg="dark" variant="dark" fixed="top">
                         <Navbar.Brand className="nav--brand ms-auto text-uppercase" style={{color: "#66FCF1"}} href="#home"><span className="brandName-firstWord">Green</span>
                             <img
                                 src={Bear}
@@ -29,9 +39,10 @@ export default function NavBar (){
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                             <Nav className="navLink-list">
-                                <Nav.Link style={{color: "#66FCF1"}} href="#movies">Movies</Nav.Link>
-                                <Nav.Link style={{color: "#66FCF1"}} href="#myprofile">My Profile</Nav.Link>
-                                <Nav.Link href="#logout" onClick={() => {onLoggedOut() }}>Logout</Nav.Link>
+                                {isAuth() && (<Nav.Link className="pr-5" href={`/users/${user}`} style={{color: "#66FCF1"}} >{user}'s Profile</Nav.Link>)}
+                                {!isAuth() && (<Nav.Link className="pr-5" href="/register" style={{color: "#66FCF1"}} >Sign up</Nav.Link>)}
+                                {!isAuth() && (<Nav.Link className="pr-5" href="/" >Login</Nav.Link>)}
+                                {isAuth() && (<Button variant="secondary" onClick={()=>{onLoggedOut() }}>Logout</Button>)}
                             </Nav>
                         </Navbar.Collapse>
                     </Navbar>
