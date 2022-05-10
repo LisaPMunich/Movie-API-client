@@ -101,9 +101,11 @@ export class MainView extends React.Component {
     }
 
 
+
     render() {
         const {movies, user} = this.state;
         let accessToken = localStorage.getItem('token');
+
 
         let LoginRouteView = () => {
             if (user) {
@@ -132,21 +134,24 @@ export class MainView extends React.Component {
             ))
         };
         let RegisterRouteView = () => {
-            // if (user) return <Navigate to="/"/>
+            const routeParams = useParams();
+            const navigate = useNavigate();
+            if (user) return navigate("/")
 
             return <CenteredLayout>
                 <RegistrationView onSubmitRegistration={(name, password, email, birthday) => {
                     registerUser(name, password, email, birthday)
                         .then(registered => {
                             if (registered) {
-                                return <Navigate to="/"/>
+                                return navigate("/")
                             }
-                            return <Navigate to="/register"/>
+                            return navigate("/register")
                         })
                 }}/>
             </CenteredLayout>
         };
         let MovieDetailRouteView = () => {
+
             if (!user) return <Navigate to="/"/>
 
             if (movies.length === 0) {
