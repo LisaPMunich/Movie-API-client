@@ -39433,6 +39433,18 @@ function NavBar({ user  }) {
                                 children: [
                                     isAuth() && /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Nav.Link, {
                                         className: "pr-5",
+                                        href: "/",
+                                        style: {
+                                            color: "#66FCF1"
+                                        },
+                                        children: "Movies"
+                                    }, void 0, false, {
+                                        fileName: "src/components/navbar/navbar.jsx",
+                                        lineNumber: 42,
+                                        columnNumber: 47
+                                    }, this),
+                                    isAuth() && /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Nav.Link, {
+                                        className: "pr-5",
                                         href: `/users/${user}`,
                                         style: {
                                             color: "#66FCF1"
@@ -39443,7 +39455,7 @@ function NavBar({ user  }) {
                                         ]
                                     }, void 0, true, {
                                         fileName: "src/components/navbar/navbar.jsx",
-                                        lineNumber: 42,
+                                        lineNumber: 43,
                                         columnNumber: 47
                                     }, this),
                                     !isAuth() && /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Nav.Link, {
@@ -39455,7 +39467,7 @@ function NavBar({ user  }) {
                                         children: "Sign up"
                                     }, void 0, false, {
                                         fileName: "src/components/navbar/navbar.jsx",
-                                        lineNumber: 43,
+                                        lineNumber: 44,
                                         columnNumber: 48
                                     }, this),
                                     !isAuth() && /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Nav.Link, {
@@ -39464,7 +39476,7 @@ function NavBar({ user  }) {
                                         children: "Login"
                                     }, void 0, false, {
                                         fileName: "src/components/navbar/navbar.jsx",
-                                        lineNumber: 44,
+                                        lineNumber: 45,
                                         columnNumber: 48
                                     }, this),
                                     isAuth() && /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Button, {
@@ -39475,7 +39487,7 @@ function NavBar({ user  }) {
                                         children: "Logout"
                                     }, void 0, false, {
                                         fileName: "src/components/navbar/navbar.jsx",
-                                        lineNumber: 45,
+                                        lineNumber: 46,
                                         columnNumber: 47
                                     }, this)
                                 ]

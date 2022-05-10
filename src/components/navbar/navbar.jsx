@@ -39,6 +39,7 @@ export default function NavBar ({ user }){
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                             <Nav className="navLink-list">
+                                {isAuth() && (<Nav.Link className="pr-5" href="/" style={{color: "#66FCF1"}} >Movies</Nav.Link>)}
                                 {isAuth() && (<Nav.Link className="pr-5" href={`/users/${user}`} style={{color: "#66FCF1"}} >{user}'s Profile</Nav.Link>)}
                                 {!isAuth() && (<Nav.Link className="pr-5" href="/register" style={{color: "#66FCF1"}} >Sign up</Nav.Link>)}
                                 {!isAuth() && (<Nav.Link className="pr-5" href="/" >Login</Nav.Link>)}
