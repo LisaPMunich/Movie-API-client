@@ -27,7 +27,7 @@ export function MovieView({movie, onBackClick}) {
     }, [username]);
 
     const toggleFavorite = () => {
-        const url = `https://young-fjord-17804.herokuapp.com/users/${username}/movies/${movie._id}`;
+        const url = `https://young-fjord-17804.herokuapp.com/users/${username}/movies/${movie.Title}`;
         if (isFavorite) {
             axios
                 .delete(url, {headers: {Authorization: `Bearer ${accessToken}`}})

@@ -106,7 +106,6 @@ export class MainView extends React.Component {
         const {movies, user} = this.state;
         let accessToken = localStorage.getItem('token');
 
-
         let LoginRouteView = () => {
             if (user) {
                 return <Navigate to="/"/>
@@ -134,7 +133,6 @@ export class MainView extends React.Component {
             ))
         };
         let RegisterRouteView = () => {
-            const routeParams = useParams();
             const navigate = useNavigate();
             if (user) return navigate("/")
 
@@ -163,7 +161,7 @@ export class MainView extends React.Component {
 
             return (
                 <MovieView className="mx-auto"
-                           movie={movies.find(movie => movie._id === routeParams.movieId)}
+                           movie={movies.find(movie => movie.Title === routeParams.movieTitle)}
                            onBackClick={() => navigate("/")}/>
             );
         };
@@ -215,7 +213,7 @@ export class MainView extends React.Component {
                                 <Route path="/login" element={<LoginRouteView/>}/>
                                 <Route exact path="/" element={<HomeView/>}/>
                                 <Route path="/register" element={<RegisterRouteView/>}/>
-                                <Route path="/movies/:movieId" element={<MovieDetailRouteView/>}/>
+                                <Route path="/movies/:movieTitle" element={<MovieDetailRouteView/>}/>
                                 <Route path="/genres/:name" element={<GenreDetailRouteView/>}/>
                                 <Route path="/directors/:name" element={<DirectorRouteView/>}/>
                                 <Route path={`/users/${user}`} element={<ProfileRouteView/>}/>

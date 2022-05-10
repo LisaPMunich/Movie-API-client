@@ -15,7 +15,7 @@ export class GenreView extends React.Component {
                     <Card.Body>
                         <Card.Title>{movie.Genre.Name}</Card.Title>
                         <Card.Text>{movie.Genre.Description}</Card.Text>
-                        <Link to={`/movies/${movie._id}`}>
+                        <Link to={`/movies/${movie.Title}`}>
                             <Button variant="outline-info">Back to movie</Button>
                         </Link>
                     </Card.Body>

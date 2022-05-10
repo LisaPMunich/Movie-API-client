@@ -27,7 +27,7 @@ export default function NavBar ({ user }){
             <Row >
                 <Col>
                     <Navbar className="navbar shadow-lg p-3 mb-3 bg-body rounded" expand="lg" bg="dark" variant="dark" fixed="top">
-                        <Navbar.Brand className="nav--brand ms-auto text-uppercase" style={{color: "#66FCF1"}} href="#home"><span className="brandName-firstWord">Green</span>
+                        <Navbar.Brand className="nav--brand ms-auto text-uppercase" style={{color: "#66FCF1"}} href="/"><span className="brandName-firstWord">Green</span>
                             <img
                                 src={Bear}
                                 width="35"
