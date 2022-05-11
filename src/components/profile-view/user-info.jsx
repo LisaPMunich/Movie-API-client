@@ -38,7 +38,7 @@ const deleteUser = (name, accessToken, navigate) => {
         });
 }
 
-export function UserInfo({user, accessToken}) {
+export function UserInfo({user, accessToken, onSubmitUpdate}) {
     const [name, setName] = useState(user.Name)
     const [password, setPassword] = useState('')
     const [email, setEmail] = useState(user.Email)
@@ -53,6 +53,36 @@ export function UserInfo({user, accessToken}) {
         month: "2-digit",
         day: "2-digit",
     }).replaceAll('. ', '-').replace('.', '');
+
+    const [passwordErr, setPasswordErr] = useState('');
+    const validate = () => {
+        let isReq = true;
+        if (!password) {
+            setPasswordErr('Password is required.');
+            isReq = false;
+        } else if (password.length < 5) {
+            setPasswordErr('Password must be at least 5 characters long.');
+            isReq = false;
+        }
+        return isReq;
+    }
+
+    const handleUpdate = (e) => {
+        e.preventDefault();
+        const formIsValid = validate();
+
+        if (!formIsValid) {
+            return;
+        }
+
+        onSubmitUpdate(
+            name,
+            password,
+            email,
+            birthday,
+            navigate,
+            accessToken);
+    };
 
     return (
                 <>
@@ -104,14 +134,11 @@ export function UserInfo({user, accessToken}) {
                         />
                     </FormGroup>
                     <div className="mt-5 text-center">
-                        <Button variant="info" type="button" onClick={() => updateUser(
-                            name,
-                            password,
-                            email,
-                            birthday,
-                            navigate,
-                            accessToken
-                        )}>Update Info</Button>
+                        <Button
+                            variant="info"
+                            type="button"
+                            onClick={handleUpdate}>Update Info
+                        </Button>
                         <Button variant="danger ml-2" onClick={() => deleteUser(name, accessToken, navigate)}>Delete
                             Profile</Button>
                     </div>

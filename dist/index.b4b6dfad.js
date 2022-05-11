@@ -39876,7 +39876,7 @@ const deleteUser = (name, accessToken, navigate)=>{
         navigate("/register");
     });
 };
-function UserInfo({ user , accessToken  }) {
+function UserInfo({ user , accessToken , onSubmitUpdate  }) {
     _s();
     const [name, setName] = _react.useState(user.Name);
     const [password, setPassword] = _react.useState('');
@@ -39891,6 +39891,24 @@ function UserInfo({ user , accessToken  }) {
         month: "2-digit",
         day: "2-digit"
     }).replaceAll('. ', '-').replace('.', '');
+    const [passwordErr, setPasswordErr] = _react.useState('');
+    const validate = ()=>{
+        let isReq = true;
+        if (!password) {
+            setPasswordErr('Password is required.');
+            isReq = false;
+        } else if (password.length < 5) {
+            setPasswordErr('Password must be at least 5 characters long.');
+            isReq = false;
+        }
+        return isReq;
+    };
+    const handleUpdate = (e)=>{
+        e.preventDefault();
+        const formIsValid = validate();
+        if (!formIsValid) return;
+        onSubmitUpdate(name, password, email, birthday, navigate, accessToken);
+    };
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.FormGroup, {
@@ -39900,7 +39918,7 @@ function UserInfo({ user , accessToken  }) {
                         children: "Name"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/user-info.jsx",
-                        lineNumber: 60,
+                        lineNumber: 90,
                         columnNumber: 25
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.FormControl, {
@@ -39913,13 +39931,13 @@ function UserInfo({ user , accessToken  }) {
                         required: true
                     }, void 0, false, {
                         fileName: "src/components/profile-view/user-info.jsx",
-                        lineNumber: 61,
+                        lineNumber: 91,
                         columnNumber: 25
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/user-info.jsx",
-                lineNumber: 59,
+                lineNumber: 89,
                 columnNumber: 21
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.FormGroup, {
@@ -39929,7 +39947,7 @@ function UserInfo({ user , accessToken  }) {
                         children: "Password"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/user-info.jsx",
-                        lineNumber: 72,
+                        lineNumber: 102,
                         columnNumber: 25
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.FormControl, {
@@ -39943,13 +39961,13 @@ function UserInfo({ user , accessToken  }) {
                         required: true
                     }, void 0, false, {
                         fileName: "src/components/profile-view/user-info.jsx",
-                        lineNumber: 73,
+                        lineNumber: 103,
                         columnNumber: 25
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/user-info.jsx",
-                lineNumber: 71,
+                lineNumber: 101,
                 columnNumber: 21
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.FormGroup, {
@@ -39959,7 +39977,7 @@ function UserInfo({ user , accessToken  }) {
                         children: "Email"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/user-info.jsx",
-                        lineNumber: 85,
+                        lineNumber: 115,
                         columnNumber: 25
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.FormControl, {
@@ -39972,13 +39990,13 @@ function UserInfo({ user , accessToken  }) {
                         required: true
                     }, void 0, false, {
                         fileName: "src/components/profile-view/user-info.jsx",
-                        lineNumber: 86,
+                        lineNumber: 116,
                         columnNumber: 25
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/user-info.jsx",
-                lineNumber: 84,
+                lineNumber: 114,
                 columnNumber: 21
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.FormGroup, {
@@ -39988,7 +40006,7 @@ function UserInfo({ user , accessToken  }) {
                         children: "Birthday"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/user-info.jsx",
-                        lineNumber: 97,
+                        lineNumber: 127,
                         columnNumber: 25
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.FormControl, {
@@ -40000,13 +40018,13 @@ function UserInfo({ user , accessToken  }) {
                         required: true
                     }, void 0, false, {
                         fileName: "src/components/profile-view/user-info.jsx",
-                        lineNumber: 98,
+                        lineNumber: 128,
                         columnNumber: 25
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/user-info.jsx",
-                lineNumber: 96,
+                lineNumber: 126,
                 columnNumber: 21
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -40015,12 +40033,11 @@ function UserInfo({ user , accessToken  }) {
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Button, {
                         variant: "info",
                         type: "button",
-                        onClick: ()=>updateUser(name, password, email, birthday, navigate, accessToken)
-                        ,
+                        onClick: handleUpdate,
                         children: "Update Info"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/user-info.jsx",
-                        lineNumber: 107,
+                        lineNumber: 137,
                         columnNumber: 25
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Button, {
@@ -40030,19 +40047,19 @@ function UserInfo({ user , accessToken  }) {
                         children: "Delete Profile"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/user-info.jsx",
-                        lineNumber: 115,
+                        lineNumber: 142,
                         columnNumber: 25
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/user-info.jsx",
-                lineNumber: 106,
+                lineNumber: 136,
                 columnNumber: 21
             }, this)
         ]
     }, void 0, true);
 }
-_s(UserInfo, "S8Xc0r+NO5lCBISzAEAFOmr0bIg=", false, function() {
+_s(UserInfo, "Yq2RTgKKS1EcaNJNZaDBFkWC7AU=", false, function() {
     return [
         _reactRouterDom.useNavigate
     ];
