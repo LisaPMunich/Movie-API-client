@@ -4,11 +4,12 @@ import axios from "axios";
 import PropTypes from "prop-types";
 import {useNavigate} from "react-router-dom";
 
-const updateUser = (username, password, email, birthday, accessToken) => {
+const updateUser = (name, password, email, birthday, navigate, accessToken) => {
     axios
-        .put(`https://young-fjord-17804.herokuapp.com/users/${username}`,
+        .put(`https://young-fjord-17804.herokuapp.com/users/${name}`,
+
             {
-                Name: username,
+                Name: name,
                 Password: password,
                 Email: email,
                 Birthday: birthday
@@ -20,12 +21,13 @@ const updateUser = (username, password, email, birthday, accessToken) => {
         .then((response) => {
             alert('User updated.');
             localStorage.setItem('user', response.data.Name);
+            navigate("/")
         });
 }
 
-const deleteUser = (username, accessToken, navigate) => {
+const deleteUser = (name, accessToken, navigate) => {
     axios
-        .delete(`https://young-fjord-17804.herokuapp.com/users/${username}`,
+        .delete(`https://young-fjord-17804.herokuapp.com/users/${name}`,
             {
                 headers: {Authorization: `Bearer ${accessToken}`}
             }
@@ -37,7 +39,7 @@ const deleteUser = (username, accessToken, navigate) => {
 }
 
 export function UserInfo({user, accessToken}) {
-    const [username, setUsername] = useState(user.Name)
+    const [name, setName] = useState(user.Name)
     const [password, setPassword] = useState('')
     const [email, setEmail] = useState(user.Email)
     const [birthday, setBirthday] = useState(user.Birthday)
@@ -53,28 +55,15 @@ export function UserInfo({user, accessToken}) {
     }).replaceAll('. ', '-').replace('.', '');
 
     return (
-                <Form
-                    className="update-form"
-                    onSubmit={(e) => {
-                        e.preventDefault();
-                        updateUser(
-                            username,
-                            password,
-                            email,
-                            birthday,
-                            accessToken
-                        );
-                    }
-                    }
-                >
+                <>
                     <FormGroup className="mt-3">
-                        <Form.Label>Username</Form.Label>
+                        <Form.Label>Name</Form.Label>
                         <FormControl
                             type="text"
-                            name="Username"
-                            placeholder="New Username"
-                            value={username}
-                            onChange={(e) => setUsername(e.target.value)}
+                            name="Name"
+                            placeholder="New Name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
                             required
                         />
                     </FormGroup>
@@ -83,6 +72,7 @@ export function UserInfo({user, accessToken}) {
                         <Form.Label>Password</Form.Label>
                         <FormControl
                             type="password"
+                            aria-autocomplete="current-password"
                             name="Password"
                             placeholder="New Password"
                             value={password}
@@ -114,17 +104,18 @@ export function UserInfo({user, accessToken}) {
                         />
                     </FormGroup>
                     <div className="mt-5 text-center">
-                        <Button variant="info" type="submit" onClick={() => updateUser(
-                            username,
+                        <Button variant="info" type="button" onClick={() => updateUser(
+                            name,
                             password,
                             email,
                             birthday,
+                            navigate,
                             accessToken
                         )}>Update Info</Button>
-                        <Button variant="danger ml-2" onClick={() => deleteUser(username, accessToken, navigate)}>Delete
+                        <Button variant="danger ml-2" onClick={() => deleteUser(name, accessToken, navigate)}>Delete
                             Profile</Button>
                     </div>
-                </Form>
+                </>
     )
 }
 

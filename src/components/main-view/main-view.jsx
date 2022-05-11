@@ -31,7 +31,7 @@ const registerUser = (name, password, email, birthday) => {
             return true;
         })
         .catch(e => {
-            console.log('error registering the user')
+            alert('error registering the user')
             return false;
         });
 
@@ -60,7 +60,7 @@ export class MainView extends React.Component {
         super();
         this.state = {
             movies: [],
-            user: null,
+            user: localStorage.getItem('user'),
         }
     }
 
@@ -68,7 +68,7 @@ export class MainView extends React.Component {
         let accessToken = localStorage.getItem('token');
         if (accessToken !== null) {
             this.setState({
-                user: localStorage.getItem('user')
+                user: localStorage.getItem('user'),
             });
             this.getMovies(accessToken);
         }
@@ -99,8 +99,6 @@ export class MainView extends React.Component {
 
         return <Navigate to="/"/>
     }
-
-
 
     render() {
         const {movies, user} = this.state;
@@ -149,7 +147,6 @@ export class MainView extends React.Component {
             </CenteredLayout>
         };
         let MovieDetailRouteView = () => {
-
             if (!user) return <Navigate to="/"/>
 
             if (movies.length === 0) {
@@ -194,7 +191,10 @@ export class MainView extends React.Component {
             );
         };
         let ProfileRouteView = () => {
-            if (!user) return <Navigate to="/"/>
+            const navigate = useNavigate();
+            if (!user){
+                return navigate("/")
+            }
             return <Col>
                 <ProfileView movies={movies}
                              username={user}
@@ -216,7 +216,7 @@ export class MainView extends React.Component {
                                 <Route path="/movies/:movieTitle" element={<MovieDetailRouteView/>}/>
                                 <Route path="/genres/:name" element={<GenreDetailRouteView/>}/>
                                 <Route path="/directors/:name" element={<DirectorRouteView/>}/>
-                                <Route path={`/users/${user}`} element={<ProfileRouteView/>}/>
+                                <Route path="/users/me" element={<ProfileRouteView/>}/>
                             </Routes>
                         </Router>
                     </Row>
