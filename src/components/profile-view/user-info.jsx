@@ -6,7 +6,7 @@ import {useNavigate} from "react-router-dom";
 
 const updateUser = (name, password, email, birthday, navigate, accessToken) => {
     axios
-        .put(`https://young-fjord-17804.herokuapp.com/users/${name}`,
+        .put(`https://young-fjord-17804.herokuapp.com/users/me`,
 
             {
                 Name: name,
@@ -27,7 +27,7 @@ const updateUser = (name, password, email, birthday, navigate, accessToken) => {
 
 const deleteUser = (name, accessToken, navigate) => {
     axios
-        .delete(`https://young-fjord-17804.herokuapp.com/users/${name}`,
+        .delete(`https://young-fjord-17804.herokuapp.com/users/me`,
             {
                 headers: {Authorization: `Bearer ${accessToken}`}
             }

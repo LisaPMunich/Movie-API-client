@@ -39851,7 +39851,7 @@ var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
 var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
 const updateUser = (name, password, email, birthday, navigate, accessToken)=>{
-    _axiosDefault.default.put(`https://young-fjord-17804.herokuapp.com/users/${name}`, {
+    _axiosDefault.default.put(`https://young-fjord-17804.herokuapp.com/users/me`, {
         Name: name,
         Password: password,
         Email: email,
@@ -39867,7 +39867,7 @@ const updateUser = (name, password, email, birthday, navigate, accessToken)=>{
     });
 };
 const deleteUser = (name, accessToken, navigate)=>{
-    _axiosDefault.default.delete(`https://young-fjord-17804.herokuapp.com/users/${name}`, {
+    _axiosDefault.default.delete(`https://young-fjord-17804.herokuapp.com/users/me`, {
         headers: {
             Authorization: `Bearer ${accessToken}`
         }
