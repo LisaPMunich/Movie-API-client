@@ -109,6 +109,7 @@ export function UserInfo({user, accessToken}) {
                             onChange={(e) => setPassword(e.target.value)}
                             required
                         />
+                        {passwordErr && <p>{passwordErr}</p>}
                     </FormGroup>
 
                     <FormGroup className="mt-3">

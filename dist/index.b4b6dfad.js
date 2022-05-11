@@ -39963,6 +39963,13 @@ function UserInfo({ user , accessToken  }) {
                         fileName: "src/components/profile-view/user-info.jsx",
                         lineNumber: 103,
                         columnNumber: 25
+                    }, this),
+                    passwordErr && /*#__PURE__*/ _jsxDevRuntime.jsxDEV("p", {
+                        children: passwordErr
+                    }, void 0, false, {
+                        fileName: "src/components/profile-view/user-info.jsx",
+                        lineNumber: 112,
+                        columnNumber: 41
                     }, this)
                 ]
             }, void 0, true, {
@@ -39977,7 +39984,7 @@ function UserInfo({ user , accessToken  }) {
                         children: "Email"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/user-info.jsx",
-                        lineNumber: 115,
+                        lineNumber: 116,
                         columnNumber: 25
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.FormControl, {
@@ -39990,13 +39997,13 @@ function UserInfo({ user , accessToken  }) {
                         required: true
                     }, void 0, false, {
                         fileName: "src/components/profile-view/user-info.jsx",
-                        lineNumber: 116,
+                        lineNumber: 117,
                         columnNumber: 25
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/user-info.jsx",
-                lineNumber: 114,
+                lineNumber: 115,
                 columnNumber: 21
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.FormGroup, {
@@ -40006,7 +40013,7 @@ function UserInfo({ user , accessToken  }) {
                         children: "Birthday"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/user-info.jsx",
-                        lineNumber: 127,
+                        lineNumber: 128,
                         columnNumber: 25
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.FormControl, {
@@ -40018,13 +40025,13 @@ function UserInfo({ user , accessToken  }) {
                         required: true
                     }, void 0, false, {
                         fileName: "src/components/profile-view/user-info.jsx",
-                        lineNumber: 128,
+                        lineNumber: 129,
                         columnNumber: 25
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/user-info.jsx",
-                lineNumber: 126,
+                lineNumber: 127,
                 columnNumber: 21
             }, this),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
@@ -40037,7 +40044,7 @@ function UserInfo({ user , accessToken  }) {
                         children: "Update Info"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/user-info.jsx",
-                        lineNumber: 137,
+                        lineNumber: 138,
                         columnNumber: 25
                     }, this),
                     /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_reactBootstrap.Button, {
@@ -40047,13 +40054,13 @@ function UserInfo({ user , accessToken  }) {
                         children: "Delete Profile"
                     }, void 0, false, {
                         fileName: "src/components/profile-view/user-info.jsx",
-                        lineNumber: 142,
+                        lineNumber: 143,
                         columnNumber: 25
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "src/components/profile-view/user-info.jsx",
-                lineNumber: 136,
+                lineNumber: 137,
                 columnNumber: 21
             }, this)
         ]
