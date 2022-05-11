@@ -5,7 +5,7 @@
   "source": "src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server/server.js",
+    "start": "parcel",
     "start:html": "parcel src/index.html",
     "watch": "parcel watch",
     "build": "parcel build"
