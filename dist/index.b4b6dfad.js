@@ -39352,8 +39352,8 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactBootstrap = require("react-bootstrap");
 var _navbarScss = require("./navbar.scss");
-var _icons8Bär50Png = require("./icons8-b\xe4r-50.png");
-var _icons8Bär50PngDefault = parcelHelpers.interopDefault(_icons8Bär50Png);
+var _icons8Bear50Png = require("./icons8-bear-50.png");
+var _icons8Bear50PngDefault = parcelHelpers.interopDefault(_icons8Bear50Png);
 function NavBar({ user  }) {
     const onLoggedOut = ()=>{
         localStorage.removeItem('token');
@@ -39393,7 +39393,7 @@ function NavBar({ user  }) {
                                     columnNumber: 121
                                 }, this),
                                 /*#__PURE__*/ _jsxDevRuntime.jsxDEV("img", {
-                                    src: _icons8Bär50PngDefault.default,
+                                    src: _icons8Bear50PngDefault.default,
                                     width: "35",
                                     height: "35",
                                     className: "nav--brand-image",
@@ -39532,8 +39532,8 @@ $RefreshReg$(_c, "NavBar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-bootstrap":"3AD9A","./navbar.scss":"8wkoA","./icons8-bär-50.png":"7ZziK","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"8wkoA":[function() {},{}],"7ZziK":[function(require,module,exports) {
-module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "icons8-bär-50.1024fea2.png" + "?" + Date.now();
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-bootstrap":"3AD9A","./navbar.scss":"8wkoA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./icons8-bear-50.png":"3QIFv"}],"8wkoA":[function() {},{}],"3QIFv":[function(require,module,exports) {
+module.exports = require('./helpers/bundle-url').getBundleURL('byUka') + "icons8-bear-50.994af963.png" + "?" + Date.now();
 
 },{"./helpers/bundle-url":"lgJ39"}],"4tuA0":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$377f = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");

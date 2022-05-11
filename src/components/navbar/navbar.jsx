@@ -1,7 +1,7 @@
 import React from 'react';
 import {Button, Col, Container, Nav, Navbar, Row} from "react-bootstrap";
 import './navbar.scss';
-import Bear from './icons8-bär-50.png'
+import Bear from './icons8-bear-50.png'
 
 export default function NavBar ({ user }){
 
