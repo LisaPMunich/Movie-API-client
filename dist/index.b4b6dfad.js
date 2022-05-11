@@ -39876,7 +39876,7 @@ const deleteUser = (name, accessToken, navigate)=>{
         navigate("/register");
     });
 };
-function UserInfo({ user , accessToken , onSubmitUpdate  }) {
+function UserInfo({ user , accessToken  }) {
     _s();
     const [name, setName] = _react.useState(user.Name);
     const [password, setPassword] = _react.useState('');
@@ -39907,7 +39907,7 @@ function UserInfo({ user , accessToken , onSubmitUpdate  }) {
         e.preventDefault();
         const formIsValid = validate();
         if (!formIsValid) return;
-        onSubmitUpdate(name, password, email, birthday, navigate, accessToken);
+        updateUser(name, password, email, birthday, navigate, accessToken);
     };
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_jsxDevRuntime.Fragment, {
         children: [

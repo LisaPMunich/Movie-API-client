@@ -38,7 +38,7 @@ const deleteUser = (name, accessToken, navigate) => {
         });
 }
 
-export function UserInfo({user, accessToken, onSubmitUpdate}) {
+export function UserInfo({user, accessToken}) {
     const [name, setName] = useState(user.Name)
     const [password, setPassword] = useState('')
     const [email, setEmail] = useState(user.Email)
@@ -75,7 +75,7 @@ export function UserInfo({user, accessToken, onSubmitUpdate}) {
             return;
         }
 
-        onSubmitUpdate(
+        updateUser(
             name,
             password,
             email,
