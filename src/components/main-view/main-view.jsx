@@ -5,7 +5,6 @@ import {BrowserRouter as Router, Navigate, Route, Routes, useNavigate, useParams
 
 import Navbar from '../navbar/navbar';
 import {LoginView} from '../login-view/login-view';
-import {MovieCard} from '../movie-card/movie-card';
 import {MovieView} from '../movie-view/movie-view';
 import {RegistrationView} from '../registration-view/registration-view';
 import {GenreView} from "../genre-view/genre-view";
@@ -16,6 +15,10 @@ import {ProfileView} from '../profile-view/profile-view';
 import {Col, Container, Row} from 'react-bootstrap';
 import './main-view.scss'
 import CenteredLayout from "../centered-layout/centered-layout";
+import {store} from "../../store/store";
+import {setMovies} from "../../store/features/moviesSlice";
+import {connect} from "react-redux";
+import MoviesList from "../movies-list/movies-list";
 
 
 const registerUser = (name, password, email, birthday) => {
@@ -54,7 +57,7 @@ const loginUser = (name, password, onLoggedIn) => {
 }
 
 
-export class MainView extends React.Component {
+class MainView extends React.Component {
 
     constructor() {
         super();
@@ -82,6 +85,8 @@ export class MainView extends React.Component {
                 this.setState({
                     movies: response.data
                 });
+
+                store.dispatch(setMovies(response.data));
             })
             .catch(function (error) {
                 console.log(error);
@@ -114,6 +119,7 @@ export class MainView extends React.Component {
                 }}/>;
         };
         let HomeView = () => {
+
             if (!user) {
                 return (
                     <Navigate to="/login"/>
@@ -124,11 +130,8 @@ export class MainView extends React.Component {
                 return <div className="main-view"/>;
             }
 
-            return movies.map(movie => (
-                <Col key={movie._id} xs={12} sm={6} md={4} lg={3} className="movie-card mb-4">
-                    <MovieCard movie={movie}/>
-                </Col>
-            ))
+            return <MoviesList/>
+
         };
         let RegisterRouteView = () => {
             const navigate = useNavigate();
@@ -206,6 +209,7 @@ export class MainView extends React.Component {
         return (
             <>
                 <Navbar user={user}/>
+
                 <Container fluid>
                     <Row className="mt-3">
                         <Router>
@@ -225,3 +229,9 @@ export class MainView extends React.Component {
         );
     }
 }
+
+let mapStateToProps = state => {
+    return { movies: state.movies }
+}
+
+export default connect(mapStateToProps, { setMovies })(MainView);

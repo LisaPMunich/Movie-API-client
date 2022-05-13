@@ -13,21 +13,27 @@
   "author": "LisaPMunich",
   "license": "ISC",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.1",
     "axios": "^0.27.0",
     "prop-types": "^15.8.1",
-    "react": "^18.0.0",
+    "react": "^18.1.0",
     "react-bootstrap": "^2.3.1",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "^6.3.0"
+    "react-dom": "^18.1.0",
+    "react-redux": "^8.0.1",
+    "react-router-dom": "^6.3.0",
+    "redux": "^4.2.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.1"
   },
   "devDependencies": {
     "@parcel/transformer-image": "^2.5.0",
-    "@parcel/transformer-sass": "^2.5.0",
     "@parcel/transformer-posthtml": "^2.5.0",
+    "@parcel/transformer-sass": "^2.5.0",
     "buffer": "^6.0.3",
     "parcel": "^2.5.0",
     "process": "^0.11.10",
     "querystring-es3": "^0.2.1",
+    "redux-devtools-extension": "^2.13.9",
     "url": "^0.11.0"
   }
 }

@@ -3,6 +3,7 @@ import {Button, Col, Container, Nav, Navbar, Row} from "react-bootstrap";
 import './navbar.scss';
 import Bear from './icons8-bear-50.png'
 
+
 export default function NavBar ({ user }){
 
     const onLoggedOut = () =>{
