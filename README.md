@@ -90,16 +90,14 @@ the solution was to remove the @oarcel/transformer-sass:^2.4.1 from the package.
 ```
 
 ## How to install and run the project ...
-
-### ... as a developer, who wants to work with the project
-
-### ... as a movie enthusiast, who wants to see the movies
+(work in progress)
 
 ## Technical Requirements (according to project brief)
 
-### Project File Structure
+## Project File Structure
+(work in progress)
 
-## Part II: Development Process of the Client-Side
 
+## Deployment on Heroku
 
-## Deployment
+The see the live app please <a href="https://green-screen-app.herokuapp.com/">click here</a>.
