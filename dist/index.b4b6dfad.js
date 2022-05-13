@@ -46103,7 +46103,7 @@ function MoviesList(props) {
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_colDefault.default, {
                 md: 12,
-                className: "mb-3",
+                className: "mb-4",
                 children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_visibilityFilterInputDefault.default, {
                     visibilityFilter: visibilityFilter
                 }, void 0, false, {
@@ -46117,7 +46117,7 @@ function MoviesList(props) {
                 columnNumber: 9
             }, this),
             filteredMovies.map((movie)=>/*#__PURE__*/ _jsxDevRuntime.jsxDEV(_colDefault.default, {
-                    className: "mb-3",
+                    className: "mb-4",
                     md: 3,
                     children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_movieCard.MovieCard, {
                         movie: movie
