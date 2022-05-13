@@ -8,19 +8,24 @@ publish = "src"
 [[redirects]]
 from = "/users/me"
 to = "/"
+status = 200
 
 [[redirects]]
 from = "/movies/*"
 to = "/"
+status = 200
 
 [[redirects]]
 from = "/genres/*"
 to = "/"
+status = 200
 
 [[redirects]]
 from = "/directors/*"
 to = "/"
+status = 200
 
 [[redirects]]
 from = "/login"
 to = "/"
+status = 200
