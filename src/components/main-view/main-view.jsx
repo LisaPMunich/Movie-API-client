@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import {HashRouter as Router, Navigate, Route, Routes, useNavigate, useParams} from 'react-router-dom';
+import {BrowserRouter as Router, Navigate, Route, Routes, useNavigate, useParams} from 'react-router-dom';
 
 import Navbar from '../navbar/navbar';
 import {LoginView} from '../login-view/login-view';
