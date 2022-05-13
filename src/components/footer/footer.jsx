@@ -3,7 +3,7 @@ import './footer.scss'
 
 export default function Footer(){
     return(
-        <div className="footer mt-4">
+        <div className="footer">
             <div className="copyright">© 2022 Copyright - LisaPMunich</div>
             <div className="attribution"> Images and Icons - &nbsp;
                 <span>

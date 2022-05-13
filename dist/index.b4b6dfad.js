@@ -46320,7 +46320,7 @@ var _reactDefault = parcelHelpers.interopDefault(_react);
 var _footerScss = require("./footer.scss");
 function Footer() {
     return /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
-        className: "footer mt-4",
+        className: "footer",
         children: [
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                 className: "copyright",
