@@ -7,16 +7,20 @@ publish = "src"
 
 [[redirects]]
 from = "/users/me"
-to = "/index.html"
+to = "/"
 
 [[redirects]]
 from = "/movies/*"
-to = "/index.html"
-
-[[redirects]]
-from = "/directors/*"
-to = "/index.html"
+to = "/"
 
 [[redirects]]
 from = "/genres/*"
-to = "/index.html"
+to = "/"
+
+[[redirects]]
+from = "/directors/*"
+to = "/"
+
+[[redirects]]
+from = "/login"
+to = "/"
