@@ -2,10 +2,6 @@ import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = [];
 
-/**
- * TODO Add thunk for calling movies api
- * https://redux.js.org/tutorials/fundamentals/part-8-modern-redux#writing-thunks
- */
 export const moviesSlice = createSlice({
     name: "movies",
     initialState,
