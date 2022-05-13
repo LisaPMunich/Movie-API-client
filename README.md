@@ -1,90 +1,91 @@
 # Movie-API-Client "Green Screen"
 <img src="https://user-images.githubusercontent.com/99111208/168389863-4e73738e-3d5d-4d84-b2d5-e03d08048b66.png">
 
-[README_Architectural Diagram for Movie-API-Client.pdf](https://github.com/LisaPMunich/Movie-API-client/files/8691347/README_Architectural.Diagram.for.Movie-API-Client.pdf)
-
-![Screenshot_README_LoginView](https://user-images.githubusercontent.com/99111208/168389858-c3ced003-58dd-47f6-9b86-2774147fdd39.png)
-
-
-![Screenshot_README_ProfileView](https://user-images.githubusercontent.com/99111208/168389870-be6bdee5-8808-425e-ae84-028a97892c5b.png)
-![Screenshot_README_RegisterView](https://user-images.githubusercontent.com/99111208/168389871-94639e87-7dbc-423f-938b-ef236c2f4a9c.png)
-![Screenshot_README_SingleMovieView](https://user-images.githubusercontent.com/99111208/168389872-ab21a3f6-e86e-460a-ae2e-12edef9cb8bf.png)
-
-
-
-
 ## Description
 This project is using React to build the client-side for a movie application based on its existing server-side code (REST API and database).
+The REST API and the client-side use the MERN stack.
 
-### What technology usage and why?
+## How to run and use the project ...
 
-For the frontend of my movie-API I chose **React**. The main reasons are
-* type of application: I need a library helping me build the UI of my app. React is suited best for the view side of the mvc approach and its virtual DOM ensures faster rendering of views
-* scope: The component-based nature of React allows me to increase the scope of my web application with little to no performance issues or concerns about entropy.
-* good documentation: for a beginner like me, it is important that the tools I use are well documented, so that I can understand the different components I work with. Another factor in my decision was, that it is kept up to date. In case of a library developed and maintained by Facebook, that is not a problem.
-* popularity: React is in high demand at the moment. This can be seen in job ad, the stars on GitHub (187k) as well as the contributions to stack overflow. This support in the developer community ensures that Il will eventually find solutions when troubleshooting.
+### clone it
 
-* mobile version: with its associated ecosystem of tools, React is also a good springboard for my next project, where I want to use React Native for a mobile application. So getting familiar with React first is valuable.
+1. First clone the file. For instructions, how to clone a github repository, [click here.](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 
-As a build tool I used **Parcel**, because it
-* requires minimal configuration
-* has fast bundle times
-* is well-documented
-* actively maintained
-* works automatically with a variety of files
-* offers some very useful features, such as building and serving code. Very helpful is also that it refreshes the browser every time the code changes (support for React Fast Refresh)
+2. Go to your local directory, where you stored the cloned file and click the index.html to open in the browser.
 
-Further information on my environment:
-* Node 16.14.2
-* parcel 2.4.1
-* macOS Monterey version 12.1
-* Chrome
+### use it live (deployed on Netlify)
 
+[Click here to use the app live](https://green-screen-movies.netlify.app/register)
 
-### File tree and key features
+## File Tree
 
 <img src="https://user-images.githubusercontent.com/99111208/168390914-f8b169ce-0157-4079-8518-f0994f4ac287.png"/>
 
-Main view
-* Returns a list of ALL movies to the user (each listed item with an image, title, and
-description)
-* Sorting and filtering
-* Ability to select a movie for more details
+## User Stories
 
-Single movie view
-* Returns data (description, genre, director, image) about a single movie to the user
-* Allows users to add a movie to their list of favorites
+* As a user, I want to be able to access information on movies, directors, and genres so that I can learn more about movies I have watched or am interested in.
+* As a user, I want to be able to create a profile, so that I can save data about my favorite movies.
 
-Login view
-* Allows users to log in with a username and password
 
-* Registration view
-* Allows new users to register (username, password, email, birthday)
+## Key Features
 
-Genre view
-* Returns data about a genre, with a name and description
-* Displays example movies
+The application provides the following major views - NavBar, Footer excluded:
 
-Director view
-* Returns data about a director (name, bio, birth year, death year)
-* Displays example movies
+### Registration
 
-Profile view
-* Allows users to update their user info (username, password, email, date of birth)
-* Allows existing users to deregister
-* Displays favorite movies
-* Allows users to remove a movie from their list of favorites
+Registering for new users (username, password, email, birthday)
 
-Single movie view and all movies views
-* Allow users to see which actors star in which movies
-* Allow users to view more information about different movies, such as the release date and the movie rating
+<img src="https://user-images.githubusercontent.com/99111208/168389871-94639e87-7dbc-423f-938b-ef236c2f4a9c.png">
 
-### What challenges did I face, what did I learn? 
 
-... from installing React
+### Login
+
+log in with a username and password
+
+<img src="https://user-images.githubusercontent.com/99111208/168389858-c3ced003-58dd-47f6-9b86-2774147fdd39.png">
+
+### Main / Home
+
+* List of ALL movies
+* Filtering by movie title (visibilityFilter)
+
+<img src="https://user-images.githubusercontent.com/99111208/168389863-4e73738e-3d5d-4d84-b2d5-e03d08048b66.png">
+
+### Single movie
+* Clicking on one movie in the movie list (main) returns a single movie (image, description, genre, director)
+* allows user to add and remove (toggle) a movie to their list of favorites by clicking a star icon
+
+<img src="https://user-images.githubusercontent.com/99111208/168389872-ab21a3f6-e86e-460a-ae2e-12edef9cb8bf.png">
+
+### Genre
+Clicking on a link in the Single movie view returns data about the genre of the movie (name, description)
+
+<img width="1760" alt="Screenshot_README_GenreView" src="https://user-images.githubusercontent.com/99111208/168395381-27a6fcf5-376e-44e2-9583-74eb7db3af69.png">
+
+### Director
+Clicking on a link in the Single movie view returns data about the director of the movie (name, bio, birth year, death year)
+
+<img width="1760" alt="Screenshot_README_DirectorView" src="https://user-images.githubusercontent.com/99111208/168395373-f2cd2bcf-ce36-4ab5-8361-b4a1bd0f627c.png">
+
+### Profile
+
+* Users can update their user info (username, password, email, date of birth)
+* Users can delete their profile / deregister
+* Display of links to favorite movies, which were selected by clicking the star icon in the Single Movie view
+
+<img src="https://user-images.githubusercontent.com/99111208/168389870-be6bdee5-8808-425e-ae84-028a97892c5b.png">
+
+## Project Dependencies
+
+<img src="https://user-images.githubusercontent.com/99111208/168397268-597c799a-3a3e-4fd5-9146-def80597686f.png">
+
+
+## What challenges did I face, what did I learn?
+
+### ... from installing React
 * in 2021 React 18 introduced a new root API, namely ReactDOM.createRoot. It is no longer necessary to pass the container into the render. This means that one needs to  replace render with createRoot. For more information, click here https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html
 
-... from installing Parcel
+### ... from installing Parcel
 * Project setup: in the package.json the entry point may not be "main", because main is used as the output file of the build. Instead define the source code for the library as follows:
 ```bash
 "source": "src/index.html"
@@ -104,15 +105,16 @@ the solution was to remove the @oarcel/transformer-sass:^2.4.1 from the package.
 "build": "parcel build"
 ```
 
-## How to install and run the project ...
-(work in progress)
+### ... from implementing Redux
 
-## Technical Requirements (according to project brief)
+Architectural Diagram before implementation
+<img src="https://user-images.githubusercontent.com/99111208/168394065-c3b6fc50-9f48-4b31-9391-af263209037e.png">
 
-## Project File Structure
-(work in progress)
+At first, I wanted to implement Actions, Reducers and Store. My IDE told me, that createStore() was recently deprecated, that I could import Legacy_createStore, but it was advised to use configureStore() instead. Since this approach was not as well documented yet, I read and listened to many tutorials trying to find the best combination for the new methods. My resume: It is a lot of boilerplate code for an application, which would not necessarily have needed it for the current complexity. Since Redux was the first library to introduce this store-system, it was good to try it out. But given the choice I would probably choose another less complicated library.
 
+### ... from Deploying on Netlify
 
-## Deployment on Heroku
-
-The see the live app please <a href="https://green-screen-app.herokuapp.com/">click here</a>.
+First I thought it went very smoothly, but after deployment I realized that reloading pages did lead to a 404 error and the Profile View did not open from the start.
+After a lengthy trial-and-error of possible solutions, I specified a netlify.toml file and specified build command, publish folder and wrote Redirects for all routes (e.g. from = "/users/me" to = "/") and Rewrites (status=200). After cleaning cache and redeployment it finally worked.
+My learning is that parcel and netlify do seem to lead to conflicts. Also, deployment on Heroku is more straightforward - I also deployed there, just to check, if it would work.
+The see the live app on heroku please <a href="https://green-screen-app.herokuapp.com/">click here</a>. 
