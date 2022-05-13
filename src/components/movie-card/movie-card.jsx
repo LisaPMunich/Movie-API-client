@@ -8,8 +8,13 @@ import "./movie-card.scss"
 export class MovieCard extends React.Component {
     render(){
         const {movie}=this.props;
+        let badgeText
+        if(movie.Genre.Name){
+            badgeText = `${movie.Genre.Name}`
+        }
         return (
-            <Card>
+            <Card className="card">
+                {movie.Genre.Name && <div className="card-badge">{badgeText}</div>}
                 <Card.Img variant="top" src={movie.ImageURL} style={{ height: "300px" }}/>
                 <Card.Body className="py-0">
                     <Card.Title className="movie-card__title">{movie.Title}</Card.Title>

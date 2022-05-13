@@ -159,6 +159,21 @@ a.form-link {
   box-sizing: border-box;
 }
 
+.card {
+  position: relative;
+}
+
+.card-badge {
+  color: #545454;
+  background-color: #ececec;
+  border: 1px solid #c5c6c7;
+  border-radius: 2px;
+  padding: 5px 7px;
+  position: absolute;
+  top: 18px;
+  left: 18px;
+}
+
 .movie-card__title {
   height: 48px;
 }
