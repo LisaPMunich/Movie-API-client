@@ -1,7 +1,20 @@
-# Movie-API-Client
+# Movie-API-Client "Green Screen"
+<img src="https://user-images.githubusercontent.com/99111208/168389863-4e73738e-3d5d-4d84-b2d5-e03d08048b66.png">
+
+[README_Architectural Diagram for Movie-API-Client.pdf](https://github.com/LisaPMunich/Movie-API-client/files/8691347/README_Architectural.Diagram.for.Movie-API-Client.pdf)
+
+![Screenshot_README_LoginView](https://user-images.githubusercontent.com/99111208/168389858-c3ced003-58dd-47f6-9b86-2774147fdd39.png)
+
+
+![Screenshot_README_ProfileView](https://user-images.githubusercontent.com/99111208/168389870-be6bdee5-8808-425e-ae84-028a97892c5b.png)
+![Screenshot_README_RegisterView](https://user-images.githubusercontent.com/99111208/168389871-94639e87-7dbc-423f-938b-ef236c2f4a9c.png)
+![Screenshot_README_SingleMovieView](https://user-images.githubusercontent.com/99111208/168389872-ab21a3f6-e86e-460a-ae2e-12edef9cb8bf.png)
+
+
+
 
 ## Description
-This project is using React to build the client-side for an application called movie-API based on its existing server-side code (REST API and database).
+This project is using React to build the client-side for a movie application based on its existing server-side code (REST API and database).
 
 ### What technology usage and why?
 
@@ -28,7 +41,9 @@ Further information on my environment:
 * Chrome
 
 
-### Key features
+### File tree and key features
+
+<img src="https://user-images.githubusercontent.com/99111208/168390914-f8b169ce-0157-4079-8518-f0994f4ac287.png"/>
 
 Main view
 * Returns a list of ALL movies to the user (each listed item with an image, title, and
