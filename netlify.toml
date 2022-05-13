@@ -4,3 +4,19 @@ publish = "dist"
 
 [dev]
 publish = "src"
+
+[[redirects]]
+from = "/users/me"
+to = "/index.html"
+
+[[redirects]]
+from = "/movies/*"
+to = "/index.html"
+
+[[redirects]]
+from = "/directors/*"
+to = "/index.html"
+
+[[redirects]]
+from = "/genres/*"
+to = "/index.html"
