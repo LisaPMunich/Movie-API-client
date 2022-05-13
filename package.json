@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "Client-side of existing RESTful Movie-API",
   "source": "src/index.html",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel",
+    "start": "parcel src/index.html",
     "start:html": "parcel src/index.html",
     "watch": "parcel watch",
-    "build": "react-scripts build"
+    "build": "parcel build"
   },
   "author": "LisaPMunich",
   "license": "ISC",
