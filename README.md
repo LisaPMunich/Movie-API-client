@@ -2,8 +2,8 @@
 <img src="https://user-images.githubusercontent.com/99111208/168389863-4e73738e-3d5d-4d84-b2d5-e03d08048b66.png">
 
 ## Description
-This project is using React to build the client-side for a movie application based on its existing server-side code (REST API and database).
-The REST API and the client-side use the MERN stack.
+This project is using React, Bootstrap and Redux to build the client-side for a movie application. It complements the  server-side (REST API and database). You can see the GitHub repo [here](https://github.com/LisaPMunich/Movie-API.git).
+The server- and the client-side use the MERN stack.
 
 ## How to run and use the project ...
 
@@ -13,9 +13,27 @@ The REST API and the client-side use the MERN stack.
 
 2. Go to your local directory, where you stored the cloned file and click the index.html to open in the browser.
 
-### use it live (deployed on Netlify)
+### use it live
 
-[Click here to use the app live](https://green-screen-movies.netlify.app/register)
+
+<table>
+<tr>
+<td>
+<img src="https://user-images.githubusercontent.com/99111208/163397361-5126a0ff-a116-4a57-9773-c1878285b045.svg" alt="Heroku icon" width="30">
+</td>
+<td>
+<a href="https://green-screen-app.herokuapp.com/">Click here to see my live page on Heroku</a>
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://user-images.githubusercontent.com/99111208/168454994-f5f73e83-d6a7-4b83-a7ab-66acc9ac1766.png" alt="Heroku icon" width="30">
+</td>
+<td>
+<a href="https://green-screen-movies.netlify.app/">Click here to see my live page on Netlify</a>
+</td>
+</tr>
+</table>
 
 ## File Tree
 
@@ -29,7 +47,7 @@ The REST API and the client-side use the MERN stack.
 
 ## Key Features
 
-The application provides the following major views - NavBar, Footer excluded:
+This single-page-application provides the following major views - NavBar, Footer excluded:
 
 ### Registration
 
