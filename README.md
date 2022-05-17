@@ -128,7 +128,7 @@ the solution was to remove the @oarcel/transformer-sass:^2.4.1 from the package.
 Architectural Diagram before implementation
 <img src="https://user-images.githubusercontent.com/99111208/168394065-c3b6fc50-9f48-4b31-9391-af263209037e.png">
 
-At first, I wanted to implement Actions, Reducers and Store. My IDE told me, that createStore() was recently deprecated, that I could import Legacy_createStore, but it was advised to use configureStore() instead. Since this approach was not as well documented yet, I read and listened to many tutorials trying to find the best combination for the new methods. My resume: It is a lot of boilerplate code for an application, which would not necessarily have needed it for the current complexity. Since Redux was the first library to introduce this store-system, it was good to try it out. But given the choice I would probably choose another less complicated library.
+At first, I wanted to implement Actions, Reducers and Store. My IDE told me, that createStore() was recently deprecated, that I could import Legacy_createStore, but it was advised to use configureStore() instead. Since this approach was not as well documented yet, I read and listened to many tutorials trying to find the best combination for the new methods. My resume: It is a lot of boilerplate code for an application, which would not necessarily have needed it for the current complexity. Since Redux was the first library to introduce this store-system, it was good to try it out. But given the choice I would probably choose another less complicated library like Recoil (https://javascript.plainenglish.io/moving-from-redux-to-recoil-42aa9d9cfaad).
 
 ### ... from Deploying on Netlify
 
