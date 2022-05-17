@@ -132,7 +132,12 @@ At first, I wanted to implement Actions, Reducers and Store. My IDE told me, tha
 
 ### ... from Deploying on Netlify
 
-First I thought it went very smoothly, but after deployment I realized that reloading pages did lead to a 404 error and the Profile View did not open from the start.
+First I thought it went very smoothly, but after deployment I realized that reloading pages did lead to a 404 error and the Profile View did not open from the start. I tried all approaches I could find online
+* replace BrowserRouter with HashRouter,
+* add _redirects file,
+* use react-scripts to build the app,
+* add netlify.toml file with general redirect command.
+
 After a lengthy trial-and-error of possible solutions, I specified a netlify.toml file and specified build command, publish folder and wrote Redirects for all routes (e.g. from = "/users/me" to = "/") and Rewrites (status=200). After cleaning cache and redeployment it finally worked.
 My learning is that parcel and netlify do seem to lead to conflicts. Also, deployment on Heroku is more straightforward - I also deployed there, just to check, if it would work.
 The see the live app on heroku please <a href="https://green-screen-app.herokuapp.com/">click here</a>. 
