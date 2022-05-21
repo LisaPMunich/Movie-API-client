@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Button, Form, NavLink} from 'react-bootstrap';
+import {Button, Form} from 'react-bootstrap';
 import './login-view.scss';
 import PropTypes from "prop-types";
 import {FormLayout} from "../form-layout/form-layout";
@@ -17,11 +17,11 @@ export function LoginView({onLogin}) {
     return (
         <FormLayout title="Login">
             <Form.Group controlId="formUsername">
-                <Form.Control className="mt-4" type="text" placeholder="Username"
+                <Form.Control className="mt-4" type="text" aria-autocomplete="name" placeholder="Username"
                               onChange={e => setName(e.target.value)}/>
             </Form.Group>
             <Form.Group controlId="formPassword">
-                <Form.Control className="mt-4" type="password" placeholder="Password"
+                <Form.Control className="mt-4" type="password" aria-autocomplete="current-password" placeholder="Password"
                               onChange={e => setPassword(e.target.value)}/>
             </Form.Group>
             <div className="text-center">
