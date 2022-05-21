@@ -19,42 +19,7 @@ import {store} from "../../store/store";
 import {setMovies} from "../../store/features/moviesSlice";
 import {connect} from "react-redux";
 import MoviesList from "../movies-list/movies-list";
-
-
-const registerUser = (name, password, email, birthday) => {
-    return axios
-        .post('https://young-fjord-17804.herokuapp.com/users', {
-            Name: name,
-            Password: password,
-            Email: email,
-            Birthday: birthday
-        })
-        .then(response => {
-            const data = response.data;
-            return true;
-        })
-        .catch(e => {
-            alert('error registering the user')
-            return false;
-        });
-
-};
-const loginUser = (name, password, onLoggedIn) => {
-    return axios
-        .post('https://young-fjord-17804.herokuapp.com/login', {
-            Name: name,
-            Password: password
-        })
-        .then(response => {
-            const data = response.data;
-            onLoggedIn(data);
-        })
-        .catch(e => {
-            console.error(e);
-            console.log('no such user')
-        });
-
-}
+import {loginUser, registerUser} from "../services/api-services";
 
 
 class MainView extends React.Component {
