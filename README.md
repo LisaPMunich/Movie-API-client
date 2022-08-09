@@ -1,4 +1,6 @@
 # Movie-API-Client "Green Screen"
+![visitor badge](https://visitor-badge.glitch.me/badge?page_id=LisaPMunich.visitor-badge)
+
 <img src="https://user-images.githubusercontent.com/99111208/168389863-4e73738e-3d5d-4d84-b2d5-e03d08048b66.png">
 
 ## Description
